@@ -69,6 +69,7 @@ class DemandCourseComponent extends Component<{}, CourseDetailsState> {
     render() {
         return(
                 <FlatList
+                style={{marginBottom : 50}}
                 data={this.state.courseDemandCards}
                 renderItem={({item}) => (
                     <CourseCard cardImg={item.cardImg} badgeColor={item.badgeColor} badgeText={item.badgeText} mainText={item.mainText} otherText={item.otherText} ratingText={item.ratingText} btnText={item.btnText}   />

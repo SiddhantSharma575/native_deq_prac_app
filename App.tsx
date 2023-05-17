@@ -2,13 +2,28 @@ import { StatusBar, Text, View } from "react-native"
 import Counter from "./components/Counter";
 import Users from "./components/Users";
 import ProfileScreen from "./screens/ProfileScreen";
+import {applyMiddleware, Store, createStore} from "redux"
+import reducer from "./store/reducer";
+import thunk from "redux-thunk"
+import {Provider} from "react-redux"
+import Article from "./components/Article";
+
+const store: Store<ArticleState, ArticleAction> & {
+  dispatch: DispatchType
+} = createStore(reducer, applyMiddleware(thunk))
+
 
 const App = () => {
-  return <View style={{flex : 1,backgroundColor : "#fff",
+  return( 
+    <Provider  store={store}>
+      <View style={{flex : 1,backgroundColor : "#fff",
 }}> 
       <StatusBar backgroundColor={"#fff"} barStyle={"dark-content"} />
-     <ProfileScreen />
+     {/* <ProfileScreen /> */}
+     <Article />
   </View>
+    </Provider>
+  )
 }
 
 export default App;
