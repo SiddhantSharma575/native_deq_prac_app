@@ -5,7 +5,9 @@ interface IArticle {
 }
 
 type ArticleState = {
-    articles : IArticle[]
+    articles : IArticle[],
+    addArticle : (article : IArticle) => void
+    removeArticle  : (article : IArticle) => void
 }
 
 type ArticleAction = {

@@ -10,9 +10,9 @@ class Article extends Component<ArticleState> {
             <View>
                 {
                     articles.map((article) => (
-                        <View>
+                        <Pressable onPress={() => this.props.removeArticle(article)}>
                             <Text>{article.title}</Text>
-                        </View>
+                        </Pressable>
                     ))
                 }
                 <Pressable onPress={() => this.props.addArticle({
@@ -37,6 +37,9 @@ function mapStateToProps(state : ArticleState) {
 const  mapDispatchToProps = (dispatch : DispatchType) => ({
     addArticle : (article : IArticle) => {
         dispatch({type : "ADD_ARTICLE",article})
+    },
+    removeArticle : (article : IArticle) => {
+        dispatch({type : "REMOVE_ARTICLE", article})
     } 
 })
 
