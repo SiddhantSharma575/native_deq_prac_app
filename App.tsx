@@ -7,6 +7,9 @@ import reducer from "./store/reducer";
 import thunk from "redux-thunk"
 import {Provider} from "react-redux"
 import Article from "./components/Article";
+import Home from "./testingComponents/Home";
+import SplashScreen from "./screens/SplashScreen";
+import FirstTest from "./testingComponents/FirstTest";
 
 const store: Store<ArticleState, ArticleAction> & {
   dispatch: DispatchType
@@ -20,7 +23,10 @@ const App = () => {
 }}> 
       <StatusBar backgroundColor={"#fff"} barStyle={"dark-content"} />
      {/* <ProfileScreen /> */}
-     <Article />
+     {/* <Article /> */}
+     {/* <Home /> */}
+     {/* <SplashScreen /> */}
+     <FirstTest />
   </View>
     </Provider>
   )

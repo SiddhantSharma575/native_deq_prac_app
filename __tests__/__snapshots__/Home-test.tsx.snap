@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Snapshot 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Enter Username"
+    style={
+      {
+        "borderColor": "#000",
+        "borderRadius": 15,
+        "borderWidth": 0.5,
+        "height": 44,
+        "width": "100%",
+      }
+    }
+    testID="username"
+  />
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Enter Password"
+    style={
+      {
+        "borderColor": "#000",
+        "borderRadius": 15,
+        "borderWidth": 0.5,
+        "height": 44,
+        "width": "100%",
+      }
+    }
+    testID="password"
+  />
+</View>
+`;
