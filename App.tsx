@@ -22,11 +22,11 @@ const App = () => {
       <View style={{flex : 1,backgroundColor : "#fff",
 }}> 
       <StatusBar backgroundColor={"#fff"} barStyle={"dark-content"} />
-     {/* <ProfileScreen /> */}
+     <ProfileScreen />
      {/* <Article /> */}
      {/* <Home /> */}
      {/* <SplashScreen /> */}
-     <FirstTest />
+     {/* <FirstTest /> */}
   </View>
     </Provider>
   )

@@ -14,6 +14,8 @@ import CustomHeader from '../components/CustomHeader';
 import CustomDetailItem from '../components/CustomDetailItem';
 import CustomJobDetails from '../components/CustomJobDetails';
 import CustomCourseDetails from '../components/CustomCourseDetails';
+import RBSheet from "react-native-raw-bottom-sheet";
+import BottomSheetCont from '../components/BottomSheetCont';
 
 type TabType = {
   id: number;
@@ -83,14 +85,9 @@ const tabData: TabType[] = [
   },
   {
     id: 2,
-    name: 'Course Details',
+    name: 'Course Plan',
     isActive: false,
-  },
-  {
-    id: 3,
-    name: 'Job Details',
-    isActive: false,
-  },
+  }
 ];
 
 class ProfileScreen extends Component<{}, ProfileScreenState> {
@@ -100,8 +97,10 @@ class ProfileScreen extends Component<{}, ProfileScreenState> {
       tabs: tabData,
     };
   }
+  
 
   handleTab(id: number) {
+    console.log(id)
     this.setState({
       tabs: this.state.tabs.map(tab => {
         if (tab.id === id) {
@@ -120,25 +119,7 @@ class ProfileScreen extends Component<{}, ProfileScreenState> {
       }),
     });
   }
-  componentDidMount(): void {
-    this.setState({
-      tabs: this.state.tabs.map(tab => {
-        if (tab.id === 1) {
-          const newTab = {
-            ...tab,
-          };
-          newTab.isActive = true;
-          return newTab;
-        } else {
-          const newTab = {
-            ...tab,
-          };
-          newTab.isActive = false;
-          return newTab;
-        }
-      }),
-    });
-  }
+  
   render() {
     return (
       <View style={styles.profile__container}>
@@ -147,10 +128,11 @@ class ProfileScreen extends Component<{}, ProfileScreenState> {
         <View style={styles.prfile__info__section}>
           <View style={styles.profile__image__sec}>
             <Image source={require('../assets/avatar.png')} />
+            <TouchableOpacity style={styles.edit__image} onPress={() => this.RBSheet.open()}>
             <Image
-              source={require('../assets/edit.png')}
-              style={styles.edit__image}
-            />
+              style={styles.edit__img__inner}
+              source={require('../assets/edit.png')} />
+            </TouchableOpacity>
           </View>
           <View style={styles.profile__bottom__sec}>
             <Text style={styles.text1}>Good Morning</Text>
@@ -171,12 +153,12 @@ class ProfileScreen extends Component<{}, ProfileScreenState> {
               </TouchableOpacity>
             ))}
           </View>
-          <View style={styles.edit_icon_sec}>
+          {/* <View style={styles.edit_icon_sec}>
             <Image
               source={require('../assets/edit.png')}
               style={styles.edit__img__st}
             />
-          </View>
+          </View> */}
         </View>
         <View style={{flex: 1}}>
           {this.state.tabs[0].isActive && (
@@ -192,8 +174,27 @@ class ProfileScreen extends Component<{}, ProfileScreenState> {
             />
           )}
           {this.state.tabs[1].isActive && <CustomCourseDetails />}
-          {this.state.tabs[2].isActive && <CustomJobDetails />}
+          {/* {this.state.tabs[2].isActive && <CustomJobDetails />} */}
         </View>
+        <RBSheet
+          ref={ref => {
+            this.RBSheet = ref;
+          }}
+          height={260}
+          openDuration={230}
+         customStyles={{
+            container: {
+              width : "90%",
+              marginLeft : "5%",
+              marginRight : "5%",
+              marginBottom : 50,
+              // opacity : 0.5,
+              backgroundColor :  "#858585"
+            }
+          }}
+        >
+           <BottomSheetCont />
+        </RBSheet>
       </View>
     );
   }
@@ -215,11 +216,15 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   edit__image: {
-    width: 20,
-    height: 20,
+    // width: 20,
+    // height: 20,
     position: 'absolute',
-    bottom: 7,
+    bottom: 10,
     right: 5,
+  },
+  edit__img__inner : {
+    width : 20,
+    height : 20
   },
   profile__bottom__sec: {
     alignItems: 'center',

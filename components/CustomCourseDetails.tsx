@@ -8,6 +8,7 @@ interface CardStateType {
   cardImg : any;
   ratingText : number;
   badgeText : string;
+  badgeTextColor : string;
   badgeColor : string;
   mainText : string;
   otherText: string;
@@ -25,18 +26,20 @@ const liveCourseArray: CardStateType[] = [
     ratingText : 4.0,
     badgeText : "22 May- 24 May",
     badgeColor : "#FEE7D7",
-    mainText : "Social Media Management",
-    otherText : "By Sayef Mamud, PixelCo",
-    btnText : "Attend Now"
+    mainText : "HTML,CSS for noob and nerds!",
+    otherText : "5 Chapters",
+    btnText : "Edit",
+    badgeTextColor : "#FD6F09"
   },
   {
     cardImg : require("../assets/sample3.png"),
     ratingText : 4.0,
     badgeText : "60 Min",
     badgeColor : "#E7E7FE",
-    mainText : "Fundamental of Pharmacy",
-    otherText : "By Linda Martin",
-    btnText : "23:45:23"
+    mainText : "Modern Interior Design for beginner!",
+    otherText : "4 Chapters",
+    btnText : "Edit",
+    badgeTextColor : "#222CC9"
   },
 ]
 
@@ -79,14 +82,15 @@ class CustomCourseDetails extends Component<{}, CourseDetailsState> {
           </TouchableOpacity>
         </View>
         {this.state.switchNo === 1 && 
-        <FlatList
+         <FlatList
          data={this.state.courseLiveCards}
          renderItem={({item}) => (
-          <CourseCard cardImg={item.cardImg}  ratingText={item.ratingText} badgeText={item.badgeText}
+          <CourseCard badgeTextColor={item.badgeTextColor} cardImg={item.cardImg}  ratingText={item.ratingText} badgeText={item.badgeText}
            badgeColor={item.badgeColor} mainText={item.mainText} otherText={item.otherText} btnText={item.btnText} />
          )}
-         horizontal
+         numColumns={2}
          />
+        
         }
         {
           this.state.switchNo === 2 && 

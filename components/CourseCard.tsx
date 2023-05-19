@@ -8,6 +8,7 @@ interface CardPropsType {
   ratingText : number;
   badgeText : string;
   badgeColor : string;
+  badgeTextColor : string;
   mainText : string;
   otherText: string;
   btnText : string
@@ -21,18 +22,20 @@ class CourseCard extends React.Component<CardPropsType> {
 
   render() {
     return (
+
+      // <View style={{width: "100%"}}>
       <View style={styles.card__container}>
         <View style={styles.image__section}>
           <Image
             source={this.props.cardImg}
             style={styles.cart__img}
           />
-          <View style={styles.ratingSection}>
+          {/* <View style={styles.ratingSection}>
           <Image source={require("../assets/star.png")} />
           <Text style={styles.ratingSecText}>{this.props.ratingText}</Text>
-          </View>
+          </View> */}
           <View style={styles.bageSection}>
-          <BadgeSection badgeText={this.props.badgeText} badgeColor={this.props.badgeColor}  />
+          <BadgeSection badgeTextColor={this.props.badgeTextColor}  badgeText={this.props.badgeText} badgeColor={this.props.badgeColor}  />
           </View>
           
         </View>
@@ -48,6 +51,7 @@ class CourseCard extends React.Component<CardPropsType> {
             </View>
         </View>
       </View>
+      // </View>
     );
   }
 }
@@ -55,20 +59,23 @@ export default CourseCard;
 
 const styles = StyleSheet.create({
   card__container: {
-    // width: '100%',
+    width: '45%',
     height: 270,
-    backgroundColor: '#fff',
+    backgroundColor : "#FFFFFF",
     elevation: 3,
     borderBottomLeftRadius: 20,
-    borderTopRightRadius: 20,
-    marginHorizontal: 10,
-    marginVertical: 10,
+    borderTopRightRadius: 10,
+    // marginHorizontal: 10,
+    // marginLeft : 10,
+    marginVertical: 25,
+    margin: 10,
   },
   image__section: {
     width: '100%',
     height : "55%",
-    borderBottomLeftRadius: 20,
-    borderTopRightRadius: 20,
+    // borderBottomLeftRadius: 20,
+    // borderTopRightRadius: 20,
+    borderRadius : 7,
     backgroundColor:'rgba(0,0,0,0.5)',
     position : "relative"
  },
@@ -76,9 +83,10 @@ const styles = StyleSheet.create({
     width : "100%",
     height : "100%",
     resizeMode: 'cover',
-    borderBottomLeftRadius: 20,
-    borderTopRightRadius: 20,
-    opacity : 0.4
+    borderRadius : 7,
+    // borderBottomLeftRadius: 20,
+    // borderTopRightRadius: 20,
+    opacity : 0.5
   },
   ratingSection : {
     position: "absolute",
@@ -120,7 +128,8 @@ const styles = StyleSheet.create({
   },
   sec2Text  : {
     fontSize : 12,
-    fontWeight : "500",
+    fontWeight : "300",
     lineHeight : 12,
+    paddingBottom :  2
   }
 });
