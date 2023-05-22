@@ -10,6 +10,7 @@ import Article from './components/Article';
 import Home from './testingComponents/Home';
 import SplashScreen from './screens/SplashScreen';
 import FirstTest from './testingComponents/FirstTest';
+import SelectUserType from './screens/SelectUserType';
 
 const store: Store<ArticleState, ArticleAction> & {
   dispatch: DispatchType;
@@ -23,8 +24,9 @@ const App = () => {
         {/* <ProfileScreen /> */}
         {/* <Article /> */}
         {/* <Home /> */}
-        <SplashScreen />
+        {/* <SplashScreen /> */}
         {/* <FirstTest /> */}
+        <SelectUserType />
       </View>
     </Provider>
   );
