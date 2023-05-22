@@ -8,6 +8,7 @@ export class SplashScreen extends Component {
         <View style={styles.top1}></View>
         <View style={styles.top2}></View>
         <Image
+          testID="logoImg"
           source={require('../assets/splash.png')}
           style={styles.splashImg}
         />

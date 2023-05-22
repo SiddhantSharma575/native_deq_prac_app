@@ -15,32 +15,33 @@ class SelectUserType extends Component<{}, SelectUserState> {
   }
   render() {
     return <View style={styles.sle__container}>
-       <View style={{alignItems : "center", marginTop : 80}}>
+       <View style={{alignItems : "center", height : "20%", justifyContent : "flex-end", marginBottom
+       : 10}}>
         <Text style={styles.main_Text}>Choose User Type</Text>
        </View>
        <View style={styles.section_1}>
          <Image style={styles.img} source={require("../assets/student_user.png")}  />
          <Text style={styles.mText}>Student</Text>
-         <TouchableOpacity onPress={() => this.setState({selected : "student"})} style={[styles.custView, this.state.selected === "student" && styles.active]}>
+         <TouchableOpacity testID='stubtn' onPress={() => this.setState({selected : "student"})} style={[styles.custView, this.state.selected === "student" && styles.active]}>
            {this.state.selected === "student" && <View style={styles.inner}></View>}
          </TouchableOpacity>
        </View>
        <View style={styles.section_1}>
          <Image style={styles.img} source={require("../assets/Instructor_img.png")}  />
          <Text style={styles.mText}>Instructor</Text>
-         <TouchableOpacity onPress={() => this.setState({selected :"instructor"})} style={[styles.custView,this.state.selected === "instructor" && styles.active]}>
+         <TouchableOpacity testID='insbtn' onPress={() => this.setState({selected :"instructor"})} style={[styles.custView,this.state.selected === "instructor" && styles.active]}>
             {this.state.selected === "instructor" && <View style={styles.inner}></View>}
          </TouchableOpacity>
        </View>
        <View style={styles.section_1}>
          <Image style={styles.img} source={require("../assets/User_img.png")}  />
          <Text style={styles.mText}>Recruiter</Text>
-         <TouchableOpacity onPress={() => this.setState({selected : "recruiter"}) } style={[styles.custView, this.state.selected === "recruiter" && styles
+         <TouchableOpacity testID='recbtn' onPress={() => this.setState({selected : "recruiter"}) } style={[styles.custView, this.state.selected === "recruiter" && styles
         .active]}>
             {this.state.selected === "recruiter" && <View style={styles.inner}></View>}
          </TouchableOpacity>
        </View>
-       <TouchableOpacity style={[styles.btn__container, this.state.selected === "" && {opacity : 0.5}]}> 
+       <TouchableOpacity testID='btn' style={[styles.btn__container, this.state.selected === "" && {opacity : 0.5}]}> 
         <Text style={styles.btn_text}>Choose</Text>
       </TouchableOpacity>
     </View>;
@@ -49,9 +50,11 @@ class SelectUserType extends Component<{}, SelectUserState> {
 
 export default SelectUserType;
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   sle__container:  {
-    flex : 1
+    flex : 1,
+    // backgroundColor : "red"
+    // alignItems : "center"
   },
   main_Text : {
     fontSize : 20,
@@ -60,15 +63,18 @@ const styles = StyleSheet.create({
     lineHeight : 24
   },
   section_1 :{
-    width : "90%",
-    marginLeft : "5%",
-    marginRight : "5%",
-    height : 96,
+    width : "95%",
+    // marginLeft : "5%",
+//marginRight : "5%",
+    // height : 96,
+    alignSelf : "center",
+    padding : 10,
     borderRadius : 12,
     backgroundColor :"#dadada",
     flexDirection : "row",
     alignItems : "center",
-    marginTop: 20
+    marginTop: 20,
+    // alignSelf : "center"
   },
   img : {
     width : 72,

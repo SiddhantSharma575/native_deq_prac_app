@@ -11,6 +11,7 @@ import Home from './testingComponents/Home';
 import SplashScreen from './screens/SplashScreen';
 import FirstTest from './testingComponents/FirstTest';
 import SelectUserType from './screens/SelectUserType';
+import LoginScreen from './screens/LoginScreen';
 
 const store: Store<ArticleState, ArticleAction> & {
   dispatch: DispatchType;
@@ -21,12 +22,13 @@ const App = () => {
     <Provider store={store}>
       <View style={{flex: 1, backgroundColor: '#fff'}}>
         <StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
-        {/* <ProfileScreen /> */}
+        <ProfileScreen />
         {/* <Article /> */}
         {/* <Home /> */}
         {/* <SplashScreen /> */}
         {/* <FirstTest /> */}
-        <SelectUserType />
+        {/* <SelectUserType /> */}
+        {/* <LoginScreen /> */}
       </View>
     </Provider>
   );

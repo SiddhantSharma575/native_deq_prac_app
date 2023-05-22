@@ -178,8 +178,8 @@ class ProfileScreen extends Component<{}, ProfileScreenState> {
         </View>
         <RBSheet
           ref={ref => {
-            this.RBSheet = ref;
-          }}
+             this.RBSheet = ref;
+           }}
           height={260}
           openDuration={230}
          customStyles={{
