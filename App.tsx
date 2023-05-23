@@ -12,6 +12,9 @@ import SplashScreen from './screens/SplashScreen';
 import FirstTest from './testingComponents/FirstTest';
 import SelectUserType from './screens/SelectUserType';
 import LoginScreen from './screens/LoginScreen';
+import ForgetPassword from './screens/ForgetPassword';
+import OTPVerify from './screens/OTPVerify';
+import HomeScreen from './screens/HomeScreen';
 
 const store: Store<ArticleState, ArticleAction> & {
   dispatch: DispatchType;
@@ -21,14 +24,17 @@ const App = () => {
   return (
     <Provider store={store}>
       <View style={{flex: 1, backgroundColor: '#fff'}}>
-        <StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
+        <StatusBar backgroundColor={'#0c67ab'} barStyle={"light-content"} />
         {/* <ProfileScreen /> */}
         {/* <Article /> */}
         {/* <Home /> */}
         {/* <SplashScreen /> */}
         {/* <FirstTest /> */}
         {/* <SelectUserType /> */}
-        <LoginScreen />
+        {/* <LoginScreen /> */}
+        {/* <ForgetPassword /> */}
+        {/* <OTPVerify /> */}
+        <HomeScreen />
       </View>
     </Provider>
   );

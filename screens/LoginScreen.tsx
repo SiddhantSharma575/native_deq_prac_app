@@ -34,8 +34,12 @@ export class LoginScreen extends Component<{}, LoginState> {
 
   handleLogin() {
     // console.warn(this.state.email + ' ' + this.state.password);
-    if (!this.state.email) {
-      this.setState({...this.state, emailError: '32334'});
+    if (this.state.email === "") {
+      this.setState({...this.state, emailError: 'error'});
+      return;
+    }
+    if(this.state.password === "") {
+      this.setState({...this.state, passwordError : "error"})
       return;
     }
   }
@@ -50,7 +54,10 @@ export class LoginScreen extends Component<{}, LoginState> {
               testID="email-input"
               value={this.state.email}
               placeholder="Enter Your Mobile Number/Email Id*"
-              onChangeText={text => this.setState({...this.state, email: text})}
+              onChangeText={text =>{
+                 this.setState({...this.state, email: text, emailError: ""})
+                }
+              }
             />
             <View style={styles.hr}></View>
             {this.state.emailError && (
@@ -66,9 +73,10 @@ export class LoginScreen extends Component<{}, LoginState> {
                 value={this.state.password}
                 secureTextEntry={this.state.isHide === false}
                 placeholder="Enter Password*"
-                onChangeText={text =>
-                  this.setState({...this.state, password: text})
+                onChangeText={text =>{
+                  this.setState({...this.state, password: text, passwordError : ""})
                 }
+              }
               />
               <TouchableOpacity
                 testID="pass-img"
@@ -87,7 +95,7 @@ export class LoginScreen extends Component<{}, LoginState> {
             </View>
             <View style={styles.hr}></View>
             {this.state.passwordError && (
-              <Text style={styles.error_msg}>
+              <Text style={styles.error_msg} testID='password-error'>
                 Password entered is incorrect. Please enter correct password
               </Text>
             )}
