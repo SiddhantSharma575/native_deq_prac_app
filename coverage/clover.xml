@@ -1,59 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684757761292" clover="3.2.0">
-  <project timestamp="1684757761292" name="All files">
-    <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="8" coveredmethods="8" elements="32" coveredelements="30" complexity="0" loc="18" ncloc="18" packages="3" files="9" classes="9"/>
+<coverage generated="1684812198916" clover="3.2.0">
+  <project timestamp="1684812198916" name="All files">
+    <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="6" methods="8" coveredmethods="8" elements="36" coveredelements="34" complexity="0" loc="20" ncloc="20" packages="3" files="9" classes="9"/>
     <package name="assets">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="BackButtonback.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/BackButtonback.png">
+      <file name="BackButtonback.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\BackButtonback.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="apple.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/apple.png">
+      <file name="apple.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\apple.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="fb.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/fb.png">
+      <file name="fb.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\fb.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="google.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/google.png">
+      <file name="google.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\google.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="hide_pass.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/hide_pass.png">
+      <file name="hide_pass.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\hide_pass.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="setting.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/setting.png">
+      <file name="setting.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\setting.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="view.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/view.png">
+      <file name="view.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\view.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="CustomHeader.tsx" path="/home/deq/Desktop/trainingCode/firstapp/components/CustomHeader.tsx">
+      <file name="CustomHeader.tsx" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\components\CustomHeader.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="8" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="screens">
-      <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="7"/>
-      <file name="LoginScreen.tsx" path="/home/deq/Desktop/trainingCode/firstapp/screens/LoginScreen.tsx">
-        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="4" methods="7" coveredmethods="7"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="28" count="8" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
-        <line num="89" count="1" type="stmt"/>
+      <metrics statements="11" coveredstatements="11" conditionals="8" coveredconditionals="6" methods="7" coveredmethods="7"/>
+      <file name="LoginScreen.tsx" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\screens\LoginScreen.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="8" coveredconditionals="6" methods="7" coveredmethods="7"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="37" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="43" count="12" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="106" count="2" type="stmt"/>
+        <line num="157" count="1" type="stmt"/>
       </file>
     </package>
   </project>

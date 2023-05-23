@@ -22,13 +22,13 @@ const App = () => {
     <Provider store={store}>
       <View style={{flex: 1, backgroundColor: '#fff'}}>
         <StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
-        <ProfileScreen />
+        {/* <ProfileScreen /> */}
         {/* <Article /> */}
         {/* <Home /> */}
         {/* <SplashScreen /> */}
         {/* <FirstTest /> */}
         {/* <SelectUserType /> */}
-        {/* <LoginScreen /> */}
+        <LoginScreen />
       </View>
     </Provider>
   );
