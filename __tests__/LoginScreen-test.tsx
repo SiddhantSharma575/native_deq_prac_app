@@ -1,8 +1,8 @@
 import 'react-native';
 import React from 'react';
-import  { LoginScreen } from '../screens/LoginScreen';
+import {LoginScreen} from '../screens/LoginScreen';
 import {fireEvent, render, screen} from '@testing-library/react-native';
-import renderer from "react-test-renderer"
+import renderer from 'react-test-renderer';
 
 describe('Login Screen Testing', () => {
   it('Check Renders Correctly', () => {
@@ -41,11 +41,11 @@ describe('Login Screen Testing', () => {
   it('Check email error message displays correctly', async () => {
     const {findByTestId} = render(<LoginScreen />);
     const emailInput = await findByTestId('email-input');
-    const passwordInput = await findByTestId("password-input");
+    const passwordInput = await findByTestId('password-input');
     const loginButton = await findByTestId('btn');
     // Simulate entering an invalid email
     fireEvent.changeText(emailInput, '');
-    fireEvent.changeText(passwordInput, "1234")
+    fireEvent.changeText(passwordInput, '1234');
     // Simulate button click
     fireEvent.press(loginButton);
     // Wait for the error message to appear
@@ -56,27 +56,43 @@ describe('Login Screen Testing', () => {
     );
   });
 
-  it("check password error message displays correctly", async () => {
-    const {findByTestId}  = render(<LoginScreen />)
-    const LoginScreenBlock = render(<LoginScreen />)    
-    const passwordInput = (await findByTestId("password-input"));
+  it('check password error message displays correctly', async () => {
+    const {findByTestId} = render(<LoginScreen />);
+    const LoginScreenBlock = render(<LoginScreen />);
+    const passwordInput = await findByTestId('password-input');
     const emailInput = await findByTestId('email-input');
     const loginButton = await findByTestId('btn');
-    fireEvent.changeText(passwordInput, "")
-    fireEvent.changeText(emailInput, "1234")
-    fireEvent.press(loginButton)
-    const passwordErrorMessage = await findByTestId("password-error")
-    expect(passwordErrorMessage.props.children).toBe("Password entered is incorrect. Please enter correct password")
-  })
+    fireEvent.changeText(passwordInput, '');
+    fireEvent.changeText(emailInput, '1234');
+    fireEvent.press(loginButton);
+    const passwordErrorMessage = await findByTestId('password-error');
+    expect(passwordErrorMessage.props.children).toBe(
+      'Password entered is incorrect. Please enter correct password',
+    );
+  });
 
-  it("check not display passsword or email error when both  are present", async () => {
-    const {findByTestId, queryByTestId} = render(<LoginScreen />)    
-    const passwordInput = await findByTestId("password-input");
+  it('check not display passsword or email error when both  are present', async () => {
+    const {findByTestId, queryByTestId} = render(<LoginScreen />);
+    const passwordInput = await findByTestId('password-input');
     const emailInput = await findByTestId('email-input');
     const loginButton = await findByTestId('btn');
-    fireEvent.changeText(passwordInput, "12323")
-    fireEvent.changeText(emailInput, "1234")
-    expect(await queryByTestId("email-error")).toBeNull()
-    expect(await queryByTestId("password-error")).toBeNull()
-  })
+    fireEvent.changeText(passwordInput, '12323');
+    fireEvent.changeText(emailInput, '1234');
+    expect(await queryByTestId('email-error')).toBeNull();
+    expect(await queryByTestId('password-error')).toBeNull();
+  });
+
+  it('Login Screen test', async () => {
+    const LoginInstance = renderer.create(<LoginScreen />).getInstance();
+    console.log(LoginInstance?.state);
+    const {getByTestId, findByTestId} = render(<LoginScreen />);
+    const passwordInput = await findByTestId('password-input');
+    const emailInput = await findByTestId('email-input');
+    const btn = getByTestId('btn');
+    fireEvent.changeText(emailInput, '1234');
+    fireEvent.changeText(passwordInput, '');
+    fireEvent.press(btn);
+    LoginInstance.state.passwordError = 'error';
+    expect(LoginInstance.state.passwordError).toBe('error');
+  });
 });

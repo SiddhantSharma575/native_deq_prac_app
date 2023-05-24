@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684824672330" clover="3.2.0">
-  <project timestamp="1684824672330" name="All files">
+<coverage generated="1684858596291" clover="3.2.0">
+  <project timestamp="1684858596291" name="All files">
     <metrics statements="23" coveredstatements="23" conditionals="10" coveredconditionals="9" methods="8" coveredmethods="8" elements="41" coveredelements="40" complexity="0" loc="23" ncloc="23" packages="3" files="9" classes="9"/>
     <package name="assets">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="BackButtonback.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/BackButtonback.png">
+      <file name="BackButtonback.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\BackButtonback.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="apple.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/apple.png">
+      <file name="apple.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\apple.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="fb.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/fb.png">
+      <file name="fb.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\fb.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="google.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/google.png">
+      <file name="google.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\google.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="hide_pass.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/hide_pass.png">
+      <file name="hide_pass.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\hide_pass.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="setting.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/setting.png">
+      <file name="setting.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\setting.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="view.png" path="/home/deq/Desktop/trainingCode/firstapp/assets/view.png">
+      <file name="view.png" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\assets\view.png">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="CustomHeader.tsx" path="/home/deq/Desktop/trainingCode/firstapp/components/CustomHeader.tsx">
+      <file name="CustomHeader.tsx" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\components\CustomHeader.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="20" type="stmt"/>
+        <line num="6" count="26" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="screens">
       <metrics statements="14" coveredstatements="14" conditionals="10" coveredconditionals="9" methods="7" coveredmethods="7"/>
-      <file name="LoginScreen.tsx" path="/home/deq/Desktop/trainingCode/firstapp/screens/LoginScreen.tsx">
+      <file name="LoginScreen.tsx" path="C:\Users\Hp\Desktop\dequode\learning-typescript\native_deq_prac_app\screens\LoginScreen.tsx">
         <metrics statements="14" coveredstatements="14" conditionals="10" coveredconditionals="9" methods="7" coveredmethods="7"/>
-        <line num="25" count="7" type="stmt"/>
-        <line num="26" count="7" type="stmt"/>
-        <line num="37" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="37" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="38" count="2" type="stmt"/>
         <line num="39" count="2" type="stmt"/>
-        <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="47" count="20" type="stmt"/>
-        <line num="58" count="4" type="stmt"/>
-        <line num="77" count="4" type="stmt"/>
+        <line num="41" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="47" count="26" type="stmt"/>
+        <line num="58" count="5" type="stmt"/>
+        <line num="77" count="5" type="stmt"/>
         <line num="84" count="2" type="stmt"/>
-        <line num="114" count="3" type="stmt"/>
+        <line num="114" count="4" type="stmt"/>
         <line num="165" count="1" type="stmt"/>
       </file>
     </package>
